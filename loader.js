@@ -84,10 +84,6 @@
     config.biosUrl = window.EJS_biosUrl;
     config.gameName = window.EJS_gameName;
     config.color = window.EJS_color;
-    config.adUrl = window.EJS_AdUrl;
-    config.adMode = window.EJS_AdMode;
-    config.adTimer = window.EJS_AdTimer;
-    config.adSize = window.EJS_AdSize;
     config.alignStartButton = window.EJS_alignStartButton;
     config.VirtualGamepadSettings = window.EJS_VirtualGamepadSettings;
     config.buttonOpts = window.EJS_Buttons;
@@ -137,7 +133,6 @@
     }
     
     window.EJS_emulator = new EmulatorJS(EJS_player, config);
-    window.EJS_adBlocked = (url, del) => window.EJS_emulator.adBlocked(url, del);
     if (typeof window.EJS_ready === "function") {
         window.EJS_emulator.on("ready", window.EJS_ready);
     }
